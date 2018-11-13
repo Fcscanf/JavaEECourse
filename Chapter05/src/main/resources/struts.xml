@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="default" extends="struts-default" namespace="/">
+        <!--<interceptors>-->
+            <!--<interceptor name="AInterceptor" class="cn.fcsca.interceptor.AInterceptor"></interceptor>-->
+        <!--</interceptors>-->
+        <action name="struts" class="cn.fcsca.action.StrutsAction">
+            <result name="success">/jsp/welcome.jsp</result>
+            <result name="error">/jsp/hello.jsp</result>
+            <result name="input">/jsp/hello.jsp</result>
+            <!--拦截配置在result后面-->
+            <!--使用系统默认的拦截器栈-->
+            <!--<interceptor-ref name="defaultStack"></interceptor-ref>-->
+            <!--配置拦截器-->
+            <!--<interceptor-ref name="AInterceptor"></interceptor-ref>-->
+        </action>
+    </package>
+
+    <package name="login" extends="struts-default">
+        <action name="login" class="cn.fcsca.action.LoginAction">
+            <result name="success">/jsp/welcome.jsp</result>
+            <result name="error">/jsp/hello.jsp</result>
+        </action>
+    </package>
+
+    <package name="file" extends="struts-default">
+        <action name="upload" class="cn.fcsca.action.UploadMoreFileAction">
+            <result name="success">/jsp/success.jsp</result>
+        </action>
+    </package>
+</struts>

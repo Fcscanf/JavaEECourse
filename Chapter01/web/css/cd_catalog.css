@@ -1,0 +1,22 @@
+CATALOG{
+    background-color: darkgrey;
+    width: 100%;
+}
+CD{
+    display: block;
+    margin-bottom: 10pt;
+    margin-left: 0;
+}
+TITLE{
+    color: bisque;
+    font-size: 20pt;
+}
+ARTIST{
+    color: blueviolet;
+    font-size: 20pt;
+}
+COUNTRY,PRICE,YEAR,COMPANY{
+    display: block;
+    color: blue;
+    margin-left: 20pt;
+}
