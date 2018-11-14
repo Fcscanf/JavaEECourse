@@ -9,11 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Chapter03" />
         <module name="Chapter05" />
+        <module name="Chapter06" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Chapter03" target="1.8" />
       <module name="Chapter05" target="1.7" />
+      <module name="Chapter06" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
