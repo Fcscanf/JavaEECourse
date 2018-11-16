@@ -10,5 +10,9 @@
         </id>
         <property name="address" column="address"/>
         <!--<one-to-one name="person" class="cn.fcsca.model.Person" property-ref="room"/>-->
+        <set name="person" inverse="false" cascade="all">
+            <key column="room_id"></key>
+            <one-to-many class="cn.fcsca.model.Person"/>
+        </set>
     </class>
 </hibernate-mapping>

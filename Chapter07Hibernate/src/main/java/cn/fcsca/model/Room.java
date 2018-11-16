@@ -1,5 +1,8 @@
 package cn.fcsca.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Room
  *
@@ -10,7 +13,7 @@ package cn.fcsca.model;
 public class Room {
     private Integer id;
     private String address;
-//    private Person person;
+    private Set person=new HashSet();
 
     public Integer getId() {
         return id;
@@ -28,13 +31,13 @@ public class Room {
         this.address = address;
     }
 
-//    public Person getPerson() {
-//        return person;
-//    }
-//
-//    public void setPerson(Person person) {
-//        this.person = person;
-//    }
+    public Set getPerson() {
+        return person;
+    }
+
+    public void setPerson(Set person) {
+        this.person = person;
+    }
 
     public Room() {
     }
