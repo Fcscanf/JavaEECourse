@@ -12,6 +12,8 @@
         <mapping resource="mapper/Student.hbm.xml"/>
         <mapping resource="mapper/Detail.hbm.xml"/>
         <mapping resource="mapper/Login.hbm.xml"/>
+        <mapping resource="mapper/Person.hbm.xml"/>
+        <mapping resource="mapper/Room.hbm.xml"/>
 
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
