@@ -9,6 +9,6 @@
             <generator class="native"/>
         </id>
         <property name="address" column="address"/>
-        <one-to-one name="person" class="cn.fcsca.model.Person" property-ref="room"/>
+        <!--<one-to-one name="person" class="cn.fcsca.model.Person" property-ref="room"/>-->
     </class>
 </hibernate-mapping>

@@ -9,6 +9,6 @@
             <generator class="native"/>
         </id>
         <property name="name" column="name"/>
-        <many-to-one name="room" column="room_id" class="cn.fcsca.model.Room" cascade="all" unique="true"/>
+        <many-to-one name="room" column="room_id" class="cn.fcsca.model.Room" cascade="all"/>
     </class>
 </hibernate-mapping>

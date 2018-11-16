@@ -10,7 +10,7 @@ package cn.fcsca.model;
 public class Room {
     private Integer id;
     private String address;
-    private Person person;
+//    private Person person;
 
     public Integer getId() {
         return id;
@@ -28,21 +28,21 @@ public class Room {
         this.address = address;
     }
 
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
+//    public Person getPerson() {
+//        return person;
+//    }
+//
+//    public void setPerson(Person person) {
+//        this.person = person;
+//    }
 
     public Room() {
     }
 
-    public Room(Integer id, String address, Person person) {
+    public Room(Integer id, String address) {
         this.id = id;
         this.address = address;
-        this.person = person;
+//        this.person = person;
     }
 
     @Override

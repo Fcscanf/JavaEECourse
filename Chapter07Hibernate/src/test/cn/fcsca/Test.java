@@ -63,4 +63,26 @@ public class Test {
         transaction.commit();
         HibernateSessionFactory.closeSession();
     }
+
+    /**
+     * 多对一单向关联测试
+     *
+     * @param
+     * @return
+     * @author Fcscanf
+     * @date 下午 23:03 2018-11-16
+     */
+    @org.junit.Test
+    public void MoreToOneTest() {
+        Session session = HibernateSessionFactory.getSession();
+        Transaction transaction = session.beginTransaction();
+        Person person = new Person();
+        Room room = new Room();
+        person.setName("DGG");
+        room.setAddress("南京市");
+        person.setRoom(room);
+        session.save(person);
+        transaction.commit();
+        HibernateSessionFactory.closeSession();
+    }
 }
