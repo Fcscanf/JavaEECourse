@@ -47,8 +47,8 @@ public class DB {
             preparedStatement.setInt(1, student.getId());
             preparedStatement.setString(2,student.getName());
             preparedStatement.setInt(3,student.getGender());
-            preparedStatement.setString(4, student.getProfessional());
-            preparedStatement.setDate(5, student.getBirthday());
+            preparedStatement.setDate(4, student.getBirthday());
+            preparedStatement.setString(5, student.getProfessional());
             preparedStatement.setString(6,student.getNote());
             preparedStatement.executeUpdate();
             return true;
