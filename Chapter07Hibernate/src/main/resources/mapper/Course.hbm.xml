@@ -10,5 +10,9 @@
         </id>
         <property name="courseNumber" column="course_number"/>
         <property name="courseName" column="course_name"/>
+        <set name="student" table="student_course" lazy="true" cascade="all">
+            <key column="course_id"></key>
+            <many-to-many column="student_id" class="cn.fcsca.model.Student"/>
+        </set>
     </class>
 </hibernate-mapping>
