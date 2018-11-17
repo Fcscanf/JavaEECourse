@@ -1,5 +1,8 @@
 package cn.fcsca.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Student
  *
@@ -14,6 +17,7 @@ public class Student {
     private String birthday;
     private String professional;
     private String note;
+    private Set course = new HashSet();
 
     public Integer getId() {
         return id;
@@ -61,6 +65,14 @@ public class Student {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public Set getCourse() {
+        return course;
+    }
+
+    public void setCourse(Set course) {
+        this.course = course;
     }
 
     @Override

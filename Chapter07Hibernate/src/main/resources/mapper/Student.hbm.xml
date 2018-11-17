@@ -5,11 +5,17 @@
 <hibernate-mapping>
 
     <class name="cn.fcsca.model.Student" table="student" schema="javaee">
-        <id name="id" column="id"/>
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
         <property name="name" column="name"/>
         <property name="gender" column="gender"/>
         <property name="birthday" column="birthday"/>
         <property name="professional" column="professional"/>
         <property name="note" column="note"/>
+        <set name="course" table="student_course" lazy="true" cascade="all">
+            <key column="student_id"></key>
+            <many-to-many class="cn.fcsca.model.Course" column="course_id"/>
+        </set>
     </class>
 </hibernate-mapping>
