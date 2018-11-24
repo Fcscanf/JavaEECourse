@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.fcsca.model.Student" table="student" schema="sh">
+        <id name="studentNumber" column="student_number"/>
+        <property name="studentName" column="student_name"/>
+        <property name="gender" column="gender"/>
+        <property name="birthday" column="birthday"/>
+        <!--<property name="profiessionalId" column="profiessional_id"/>-->
+        <property name="totalCredit" column="total_credit"/>
+        <property name="note" column="note"/>
+        <property name="photo" column="photo"/>
+
+        <many-to-one name="professional" class="cn.fcsca.model.Professional" fetch="select" cascade="all" lazy="false">
+            <column name="profiessional_id"/>
+        </many-to-one>
+
+        <set name="course" table="student_course" lazy="false" cascade="save-update">
+            <key column="sutdent_number"></key>
+            <many-to-many class="cn.fcsca.model.Course" column="course_number"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

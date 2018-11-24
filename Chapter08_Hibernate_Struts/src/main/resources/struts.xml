@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="login" class="cn.fcsca.action.LoginAction">
+            <result name="success">/jsp/main.jsp</result>
+            <result name="error">/jsp/login.jsp</result>
+        </action>
+        <action name="stuInfo" class="cn.fcsca.action.StudentAction">
+            <result name="success">/jsp/student_info.jsp</result>
+        </action>
+        <action name="getImage" class="cn.fcsca.action.StudentAction" method="getImage"></action>
+        <action name="updateStudentInfo" class="cn.fcsca.action.StudentAction" method="updateStudentInfo">
+            <result name="success">/jsp/update_student_info.jsp</result>
+        </action>
+        <action name="updateStu" class="cn.fcsca.action.StudentAction" method="updateStudent">
+            <result name="success">/jsp/update_student_success.jsp</result>
+        </action>
+        <action name="getStuCourse" class="cn.fcsca.action.StudentAction" method="getStudentCourse">
+            <result name="success">/jsp/student_course.jsp</result>
+        </action>
+        <action name="delCou" class="cn.fcsca.action.StudentAction" method="deleteCourse">
+            <result name="success">/jsp/delete_course_success.jsp</result>
+        </action>
+        <action name="selectCourse" class="cn.fcsca.action.StudentAction" method="selectCourse">
+            <result name="success">/jsp/select_course.jsp</result>
+            <result name="error">/jsp/select_course_fail.jsp</result>
+        </action>
+        <action name="allCourse" class="cn.fcsca.action.CourseAction">
+            <result name="success">/jsp/all_course.jsp</result>
+        </action>
+    </package>
+</struts>

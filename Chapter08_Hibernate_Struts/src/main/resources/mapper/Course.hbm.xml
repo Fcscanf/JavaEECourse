@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.fcsca.model.Course" table="course" schema="sh">
+        <id name="courseNumber" column="course_number"/>
+        <property name="courseName" column="course_name"/>
+        <property name="schoolYear" column="school_year"/>
+        <property name="courseTime" column="course_time"/>
+        <property name="courseCredit" column="course_credit"/>
+        <set name="student" table="student_course" lazy="true" inverse="true">
+            <key column="course_number"></key>
+            <many-to-many class="cn.fcsca.model.Student" column="sutdent_number"></many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

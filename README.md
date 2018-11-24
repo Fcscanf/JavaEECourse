@@ -14,3 +14,9 @@
 ## Chapter07-Hibernate开发，Maven工程，jar包版本配置在pom.xml文件
 ### 示例实现
 一对一、一对多、多对一、多对多关系查询
+## Chapter08-Hibernate-Struts开发，Maven工程，jar包版本配置在pom.xml文件
+### 功能实现
+登录
+学生选课学习查询
+学生选课修改
+！！！未完成说明：修改选课获取的登录ID有问题
