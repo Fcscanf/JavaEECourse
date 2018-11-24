@@ -34,7 +34,7 @@ public class Test {
     }
 
     /**
-     * 设置注入测试
+     * 设置注入和构造注入的测试
      *
      * @param
      * @return
@@ -42,7 +42,7 @@ public class Test {
      * @date 上午 0:26 2018-11-25
      */
     @org.junit.Test
-    public void SetDependency() {
+    public void SetAndConStructDependency() {
         ApplicationContext context = new FileSystemXmlApplicationContext("src/main/resources/applicationContext.xml");
         Human human = null;
         human = (Human) context.getBean("chinese");

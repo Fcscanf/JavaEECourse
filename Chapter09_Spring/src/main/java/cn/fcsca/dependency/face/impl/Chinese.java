@@ -14,7 +14,30 @@ public class Chinese implements Human {
 
     private Language language;
 
+    /**
+     * 设置注入
+     *
+     * @param
+     * @return
+     * @author Fcscanf
+     * @date 上午 0:36 2018-11-25
+     */
     public void setLanguage(Language language) {
+        this.language = language;
+    }
+
+    public Chinese() {
+    }
+
+    /**
+     * 构造注入的有参无参构造方法
+     *
+     * @param
+     * @return
+     * @author Fcscanf
+     * @date 上午 0:37 2018-11-25
+     */
+    public Chinese(Language language) {
         this.language = language;
     }
 

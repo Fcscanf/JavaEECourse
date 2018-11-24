@@ -17,8 +17,14 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <!--设置注入-->
-    <bean id="chinese" class="cn.fcsca.dependency.face.impl.Chinese">
-        <property name="language" ref="english"></property>
-    </bean>
+    <!--<bean id="chinese" class="cn.fcsca.dependency.face.impl.Chinese">-->
+        <!--<property name="language" ref="english"></property>-->
+    <!--</bean>-->
     <bean id="english" class="cn.fcsca.dependency.face.impl.English"></bean>
+
+    <!--构造注入-->
+    <bean id="chinese" class="cn.fcsca.dependency.face.impl.Chinese">
+        <constructor-arg ref="english"/>
+    </bean>
+
 </beans>
