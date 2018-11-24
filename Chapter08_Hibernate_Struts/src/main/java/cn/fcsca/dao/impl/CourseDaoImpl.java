@@ -3,7 +3,6 @@ package cn.fcsca.dao.impl;
 import cn.fcsca.dao.CourseDao;
 import cn.fcsca.factory.HibernateSessionFactory;
 import cn.fcsca.model.Course;
-import cn.fcsca.model.Professional;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
