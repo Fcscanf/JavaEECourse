@@ -26,3 +26,6 @@
 SpringAOP、代理机制-静态代理、动态代理
 Spring的切面编程
 Spring的事物支持
+# Chapter10_Spring_Sttruts开发，Maven工程，jar包版本配置在pom.xml文件
+### 示例实现
+Spring_Struts整合-用户名、密码输入跳转到登录界面
