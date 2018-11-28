@@ -1,9 +1,14 @@
 package cn.fcsca;
 
+import cn.fcsca.aop.proxy.dynamicproxy.Ihello;
+import cn.fcsca.aop.proxy.dynamicproxy.LogHandler;
+import cn.fcsca.aop.proxy.dynamicproxy.impl.HelloSpeaker;
 import cn.fcsca.dependency.face.Human;
 import cn.fcsca.dependency.factory.Factory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import java.lang.reflect.Proxy;
 
 /**
  * Test
@@ -47,5 +52,22 @@ public class Test {
         Human human = null;
         human = (Human) context.getBean("chinese");
         human.speak();
+    }
+
+    /**
+     * 测试动态代理
+     *
+     * @param
+     * @return
+     * @author Fcscanf
+     * @date 下午 22:23 2018-11-28
+     */
+    @org.junit.Test
+    public void ProxyTest() {
+        HelloSpeaker helloSpeaker = new HelloSpeaker();
+        LogHandler logHandler = new LogHandler(helloSpeaker);
+        Class cls = helloSpeaker.getClass();
+        Ihello ihello = (Ihello) Proxy.newProxyInstance(cls.getClassLoader(), cls.getInterfaces(), logHandler);
+        ihello.hello("Fcs");
     }
 }
