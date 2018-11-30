@@ -1,5 +1,6 @@
 package cn.fcsca;
 
+import cn.fcsca.advice.face.IHello;
 import cn.fcsca.aop.proxy.dynamicproxy.Ihello;
 import cn.fcsca.aop.proxy.dynamicproxy.LogHandler;
 import cn.fcsca.aop.proxy.dynamicproxy.impl.HelloSpeaker;
@@ -18,6 +19,9 @@ import java.lang.reflect.Proxy;
  * @date 下午 23:58 2018-11-24
  */
 public class Test {
+    ApplicationContext context = new
+            FileSystemXmlApplicationContext
+            ("src/main/resources/applicationContext.xml");
 
     /**
      * 测试工厂模式
@@ -48,7 +52,6 @@ public class Test {
      */
     @org.junit.Test
     public void SetAndConStructDependency() {
-        ApplicationContext context = new FileSystemXmlApplicationContext("src/main/resources/applicationContext.xml");
         Human human = null;
         human = (Human) context.getBean("chinese");
         human.speak();
@@ -69,5 +72,19 @@ public class Test {
         Class cls = helloSpeaker.getClass();
         Ihello ihello = (Ihello) Proxy.newProxyInstance(cls.getClassLoader(), cls.getInterfaces(), logHandler);
         ihello.hello("Fcs");
+    }
+
+    /**
+     * 测试AOP Advice
+     *
+     * @param
+     * @return
+     * @author Fcscanf
+     * @date 下午 22:55 2018-11-29
+     */
+    @org.junit.Test
+    public void AOPAdvice() {
+        IHello ihello = (IHello) context.getBean("helloProxy");
+        ihello.hello("TGR");
     }
 }

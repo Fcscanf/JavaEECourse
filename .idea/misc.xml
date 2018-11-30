@@ -4,6 +4,10 @@
     <file type="web" url="file://$PROJECT_DIR$/Chapter03" />
     <file type="web" url="file://$PROJECT_DIR$/Chapter05" />
     <file type="web" url="file://$PROJECT_DIR$/Chapter06" />
+    <file type="web" url="file://$PROJECT_DIR$/Chapter07_Hibernate" />
+    <file type="web" url="file://$PROJECT_DIR$/Chapter08_Hibernate_Struts" />
+    <file type="web" url="file://$PROJECT_DIR$/Chapter09_Spring" />
+    <file type="web" url="file://$PROJECT_DIR$/Chapter10_Spring_Struts" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -11,6 +15,11 @@
         <option value="$PROJECT_DIR$/Chapter03/pom.xml" />
         <option value="$PROJECT_DIR$/Chapter05/pom.xml" />
         <option value="$PROJECT_DIR$/Chapter06/pom.xml" />
+        <option value="$PROJECT_DIR$/Chapter07Hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/Chapter08_Hibernate_Struts/pom.xml" />
+        <option value="$PROJECT_DIR$/Chapter09_Spring/pom.xml" />
+        <option value="$PROJECT_DIR$/Chapter10_Spring_Struts/pom.xml" />
+        <option value="$PROJECT_DIR$/Chapter07_Hibernate/pom.xml" />
       </list>
     </option>
   </component>

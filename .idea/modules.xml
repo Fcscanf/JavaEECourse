@@ -7,6 +7,10 @@
       <module fileurl="file://$PROJECT_DIR$/Chapter03/Chapter03.iml" filepath="$PROJECT_DIR$/Chapter03/Chapter03.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter05/Chapter05.iml" filepath="$PROJECT_DIR$/Chapter05/Chapter05.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter06/Chapter06.iml" filepath="$PROJECT_DIR$/Chapter06/Chapter06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter07_Hibernate/Chapter07_Hibernate.iml" filepath="$PROJECT_DIR$/Chapter07_Hibernate/Chapter07_Hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter08_Hibernate_Struts/Chapter08_Hibernate_Struts.iml" filepath="$PROJECT_DIR$/Chapter08_Hibernate_Struts/Chapter08_Hibernate_Struts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter09_Spring/Chapter09_Spring.iml" filepath="$PROJECT_DIR$/Chapter09_Spring/Chapter09_Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter10_Spring_Struts/Chapter10_Spring_Struts.iml" filepath="$PROJECT_DIR$/Chapter10_Spring_Struts/Chapter10_Spring_Struts.iml" />
     </modules>
   </component>
 </project>

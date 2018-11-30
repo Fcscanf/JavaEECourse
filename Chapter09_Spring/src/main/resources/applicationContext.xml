@@ -27,4 +27,21 @@
         <constructor-arg ref="english"/>
     </bean>
 
+    <!--通知Advice相关bean-->
+    <bean id="logBeforeAdvice" class="cn.fcsca.advice.face.impl.LogBeforeAdvice"/>
+    <bean id="helloSpeaker" class="cn.fcsca.advice.face.impl.HelloSpeaker"/>
+    <bean id="helloProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="proxyInterfaces">
+            <value>cn.fcsca.advice.face.IHello</value>
+        </property>
+        <property name="target">
+            <ref bean="helloSpeaker"/>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>logBeforeAdvice</value>
+            </list>
+        </property>
+    </bean>
+
 </beans>

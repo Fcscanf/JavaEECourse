@@ -10,11 +10,11 @@ import java.util.logging.Logger;
  * @description
  * @date 下午 17:08 2018-11-28
  */
-public class HelloProxy implements Ihello {
+public class HelloProxy implements IHello {
     private Logger logger = Logger.getLogger(this.getClass().getName());
-    private Ihello ihello;
+    private IHello ihello;
 
-    public HelloProxy(Ihello ihello) {
+    public HelloProxy(IHello ihello) {
         this.ihello = ihello;
     }
 

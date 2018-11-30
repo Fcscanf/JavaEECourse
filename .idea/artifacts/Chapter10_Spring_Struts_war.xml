@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Chapter10_Spring_Struts:war">
+    <output-path>$PROJECT_DIR$/Chapter10_Spring_Struts/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Chapter10_Spring_Struts</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Chapter10_Spring_Struts.war">
+      <element id="artifact" artifact-name="Chapter10_Spring_Struts:war exploded" />
+    </root>
+  </artifact>
+</component>

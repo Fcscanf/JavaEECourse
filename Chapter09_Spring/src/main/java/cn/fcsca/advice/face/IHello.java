@@ -1,4 +1,4 @@
-package cn.fcsca.aop.proxy.dynamicproxy;
+package cn.fcsca.advice.face;
 
 /**
  * IHello
@@ -7,6 +7,6 @@ package cn.fcsca.aop.proxy.dynamicproxy;
  * @description
  * @date 下午 16:59 2018-11-28
  */
-public interface Ihello {
+public interface IHello {
     public void hello(String name);
 }

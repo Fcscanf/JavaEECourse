@@ -11,7 +11,7 @@ import cn.fcsca.aop.proxy.staticproxy.impl.HelloSpeaker;
  */
 public class ProxyDome {
     public static void main(String[] args) {
-        Ihello ihello = new HelloProxy(new HelloSpeaker());
+        IHello ihello = new HelloProxy(new HelloSpeaker());
         ihello.hello("Fcsa");
     }
 }

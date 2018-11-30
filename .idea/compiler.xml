@@ -10,12 +10,20 @@
         <module name="Chapter03" />
         <module name="Chapter05" />
         <module name="Chapter06" />
+        <module name="Chapter07_Hibernate" />
+        <module name="Chapter08_Hibernate_Struts" />
+        <module name="Chapter09_Spring" />
+        <module name="Chapter10_Spring_Struts" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Chapter03" target="1.8" />
       <module name="Chapter05" target="1.7" />
       <module name="Chapter06" target="1.7" />
+      <module name="Chapter07_Hibernate" target="1.7" />
+      <module name="Chapter08_Hibernate_Struts" target="1.7" />
+      <module name="Chapter09_Spring" target="1.7" />
+      <module name="Chapter10_Spring_Struts" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
