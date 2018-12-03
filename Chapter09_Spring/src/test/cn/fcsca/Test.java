@@ -87,4 +87,15 @@ public class Test {
         IHello ihello = (IHello) context.getBean("helloProxy");
         ihello.hello("TGR");
     }
+
+    /**
+     * 测试AOP Advice PointCut
+     * @author Fcscanf
+     * @date 下午 22:55 2018-11-29
+     */
+    @org.junit.Test
+    public void AOPAdvicePointCut() {
+        IHello ihello = (IHello) context.getBean("helloProxy");
+        ihello.hello("TGR");
+    }
 }

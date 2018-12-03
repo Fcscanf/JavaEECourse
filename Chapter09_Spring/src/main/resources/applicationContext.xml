@@ -28,20 +28,53 @@
     </bean>
 
     <!--通知Advice相关bean-->
-    <bean id="logBeforeAdvice" class="cn.fcsca.advice.face.impl.LogBeforeAdvice"/>
-    <bean id="helloSpeaker" class="cn.fcsca.advice.face.impl.HelloSpeaker"/>
-    <bean id="helloProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
-        <property name="proxyInterfaces">
-            <value>cn.fcsca.advice.face.IHello</value>
-        </property>
-        <property name="target">
-            <ref bean="helloSpeaker"/>
-        </property>
-        <property name="interceptorNames">
-            <list>
-                <value>logBeforeAdvice</value>
-            </list>
-        </property>
-    </bean>
+    <!--TODO:Error creating bean with name 'helloProxy':
+              FactoryBean threw exception on object creation;
+              nested exception is org.springframework.aop.framework.AopConfigException:
+              Unknown advisor type class cn.fcsca.advice.face.impl.LogBeforeAdvice;
+              Can only include Advisor or Advice type beans in interceptorNames chain except for last entry,which may also be target or TargetSource;
+              nested exception is org.springframework.aop.framework.adapter.UnknownAdviceTypeException: Advice object
+              [cn.fcsca.advice.face.impl.LogBeforeAdvice@543788f3] is neither a supported subinterface
+              of [org.aopalliance.aop.Advice] nor an [org.springframework.aop.Advisor]-->
+    <!--<bean id="logBeforeAdvice" class="cn.fcsca.advice.face.impl.LogBeforeAdvice"/>-->
+    <!--<bean id="helloSpeaker" class="cn.fcsca.advice.face.impl.HelloSpeaker"/>-->
+    <!--<bean id="helloProxy" class="org.springframework.aop.framework.ProxyFactoryBean">-->
+        <!--<property name="proxyInterfaces">-->
+            <!--<value>cn.fcsca.advice.face.IHello</value>-->
+        <!--</property>-->
+        <!--<property name="target">-->
+            <!--<ref bean="helloSpeaker"/>-->
+        <!--</property>-->
+        <!--<property name="interceptorNames">-->
+            <!--<list>-->
+                <!--<value>logBeforeAdvice</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--切入点相关bean-->
+    <!--<bean id="logBeforeAdvice" class="cn.fcsca.advice.pointcut.face.impl.LogBeforeAdvice"/>-->
+    <!--<bean id="helloAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">-->
+        <!--<property name="mappedName">-->
+            <!--<value>hello*</value>-->
+        <!--</property>-->
+        <!--<property name="advice">-->
+            <!--<ref bean="logBeforeAdvice"/>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean class="cn.fcsca.advice.face.impl.HelloSpeaker" id="helloSpeaker"/>-->
+    <!--<bean class="org.springframework.aop.framework.ProxyFactoryBean" id="factoryBean">-->
+        <!--<property name="proxyInterfaces">-->
+            <!--<value>cn.fcsca.advice.pointcut.face.IHello</value>-->
+        <!--</property>-->
+        <!--<property name="target">-->
+            <!--<ref bean="helloSpeaker"/>-->
+        <!--</property>-->
+        <!--<property name="interceptorNames">-->
+            <!--<list>-->
+                <!--<value>helloAdvisor</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
 </beans>
