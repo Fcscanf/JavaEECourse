@@ -1,7 +1,6 @@
 package cn.fcsca;
 
-import cn.fcsca.advice.face.IHello;
-import cn.fcsca.aop.proxy.dynamicproxy.Ihello;
+import cn.fcsca.aop.proxy.dynamicproxy.IHello;
 import cn.fcsca.aop.proxy.dynamicproxy.LogHandler;
 import cn.fcsca.aop.proxy.dynamicproxy.impl.HelloSpeaker;
 import cn.fcsca.dependency.face.Human;
@@ -70,32 +69,8 @@ public class Test {
         HelloSpeaker helloSpeaker = new HelloSpeaker();
         LogHandler logHandler = new LogHandler(helloSpeaker);
         Class cls = helloSpeaker.getClass();
-        Ihello ihello = (Ihello) Proxy.newProxyInstance(cls.getClassLoader(), cls.getInterfaces(), logHandler);
+        IHello ihello = (IHello) Proxy.newProxyInstance(cls.getClassLoader(), cls.getInterfaces(), logHandler);
         ihello.hello("Fcs");
     }
 
-    /**
-     * 测试AOP Advice
-     *
-     * @param
-     * @return
-     * @author Fcscanf
-     * @date 下午 22:55 2018-11-29
-     */
-    @org.junit.Test
-    public void AOPAdvice() {
-        IHello ihello = (IHello) context.getBean("helloProxy");
-        ihello.hello("TGR");
-    }
-
-    /**
-     * 测试AOP Advice PointCut
-     * @author Fcscanf
-     * @date 下午 22:55 2018-11-29
-     */
-    @org.junit.Test
-    public void AOPAdvicePointCut() {
-        IHello ihello = (IHello) context.getBean("helloProxy");
-        ihello.hello("TGR");
-    }
 }

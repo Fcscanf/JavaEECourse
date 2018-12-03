@@ -1,6 +1,6 @@
 package cn.fcsca.aop.proxy.dynamicproxy.impl;
 
-import cn.fcsca.aop.proxy.dynamicproxy.Ihello;
+import cn.fcsca.aop.proxy.dynamicproxy.IHello;
 
 /**
  * HelloSpeaker
@@ -9,7 +9,7 @@ import cn.fcsca.aop.proxy.dynamicproxy.Ihello;
  * @description
  * @date 下午 16:59 2018-11-28
  */
-public class HelloSpeaker implements Ihello {
+public class HelloSpeaker implements IHello {
 
     @Override
     public void hello(String name) {
